@@ -68,7 +68,7 @@ docker compose up -d
 Crie as tabelas dos bancos de dados executando o comando abaixo:
 
 ```cmd
-python -c "from app.database import source_engine, target_engine; from app.models import SourceBase, TargetBase; SourceBase.metadata.create_all(source_engine); TargetBase.metadata.create_all(target_engine)"
+python -m app.create_tables
 ```
 
 Popule o banco de dados *source_db* (fonte) da seguinte forma:
